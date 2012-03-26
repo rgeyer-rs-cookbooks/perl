@@ -23,7 +23,7 @@ end
 
 package "libwww-perl" do
   case node['platform']
-  when "centos"
+  when "amazon","centos","redhat","scientific"
     package_name "perl-libwww-perl"
   when "arch"
     package_name "perl-libwww"
@@ -33,7 +33,7 @@ end
 
 package "libperl-dev" do
   case node['platform']
-  when "centos","arch"
+  when "amazon","centos","redhat","scientific","arch"
     action :nothing
   else
     action :upgrade
@@ -48,7 +48,7 @@ end
 
 cookbook_file "CPAN-Config.pm" do
   case node['platform']
-  when "centos","redhat"
+  when "amazon","centos","redhat","scientific"
     path "/usr/lib/perl5/5.8.8/CPAN/Config.pm"
   when "arch"
     path "/usr/share/perl5/core_perl/CPAN/Config.pm"
