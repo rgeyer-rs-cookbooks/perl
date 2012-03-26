@@ -22,7 +22,7 @@ package "perl" do
 end
 
 package "libwww-perl" do
-  case node[:platform]
+  case node['platform']
   when "centos"
     package_name "perl-libwww-perl"
   when "arch"
@@ -32,7 +32,7 @@ package "libwww-perl" do
 end
 
 package "libperl-dev" do
-  case node[:platform]
+  case node['platform']
   when "centos","arch"
     action :nothing
   else
@@ -47,7 +47,7 @@ directory "/root/.cpan" do
 end
 
 cookbook_file "CPAN-Config.pm" do
-  case node[:platform]
+  case node['platform']
   when "centos","redhat"
     path "/usr/lib/perl5/5.8.8/CPAN/Config.pm"
   when "arch"
@@ -55,7 +55,7 @@ cookbook_file "CPAN-Config.pm" do
   else
     path "/etc/perl/CPAN/Config.pm"
   end
-  source "Config-#{node[:languages][:perl][:version]}.pm"
+  source "Config-#{node['languages']['perl']['version']}.pm"
   owner "root"
   group "root"
   mode 0644
