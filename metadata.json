@@ -1,0 +1,40 @@
+{
+  "dependencies": {
+  },
+  "name": "perl",
+  "maintainer_email": "cookbooks@opscode.com",
+  "attributes": {
+  },
+  "license": "Apache 2.0",
+  "suggestions": {
+  },
+  "platforms": {
+    "scientific": ">= 0.0.0",
+    "debian": ">= 0.0.0",
+    "mint": ">= 0.0.0",
+    "fedora": ">= 0.0.0",
+    "centos": ">= 0.0.0",
+    "arch": ">= 0.0.0",
+    "amazon": ">= 0.0.0",
+    "ubuntu": ">= 0.0.0",
+    "oracle": ">= 0.0.0",
+    "redhat": ">= 0.0.0"
+  },
+  "maintainer": "Opscode, Inc.",
+  "long_description": "Description\n===========\n\nManages Perl installation and provides `cpan_module`, to install modules \nfrom... CPAN.\n\nRequirements\n============\n\n## Platform:\n\n* Debian/Ubuntu/Mint\n* RHEL/CentOS/Scientific/Oracle/Fedora\n* ArchLinux\n\nAttributes\n==========\n\n  * perl['packages'] - platform specific packages installed by default recipe\n\n  * perl['cpan_path'] - platform specific path for CPAN configuration file\n\nUsage\n=====\n\nTo install a module from CPAN:\n\n    cpan_module \"App::Munchies\"\n\nOptionally, installation can forced with the 'force' parameter.\n\n    cpan_module \"App::Munchies\"\n      force true\n    end\n\nLicense and Author\n==================\n\nAuthor:: Joshua Timberman (<joshua@opscode.com>)\nCopyright:: 2009, Opscode, Inc.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\n",
+  "version": "0.10.1",
+  "recommendations": {
+  },
+  "recipes": {
+    "perl": "Installs perl and provides a script to install cpan modules"
+  },
+  "groupings": {
+  },
+  "conflicting": {
+  },
+  "replacing": {
+  },
+  "description": "Installs perl and provides a define for maintaining CPAN modules",
+  "providing": {
+  }
+}
